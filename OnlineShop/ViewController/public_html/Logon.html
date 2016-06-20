@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"> </meta>
+    <title>Logon</title>
+        <style>
+         body
+         {
+             background-color:#33FF99;
+         }
+        </style>
+        
+        <script>
+            function validateForm()
+            {
+                var x=document.forms["input"]["fname"].value;
+                if (x==null || x=="")
+                {
+                    alert("First name must be filled out");
+                    return false;
+                }
+            }
+        </script>
+  </head>
+  <body>
+
+  <form name="input" action="authenticate" onsubmit="return validateForm()" method="post">
+   <fieldset>
+    <legend>Please Log In</legend>
+     <p>
+       First Name: <input type="text" name="fname"> 
+       Password: <input type="password" name="password">
+     </p>
+      <input type="submit" value="Submit">
+   </fieldset>
+  </form>
+  
+  
+  
+  <br> </br>
+  
+  <fieldset>
+    <legend>Are you a new user? Please sign up.</legend>
+      <a href="Signup.html" >Sign up</a> 
+  </fieldset>
+  
+  <!-- 
+  <script language="javascript">
+  function check(form)
+  {
+
+  if(form.fname.value && form.password.value)
+  {
+     alert("Welcome to BOOKSIS.COM");
+     var fname = document.getElementById("fname").value;
+     document.write("Welcome " + fname);
+  }
+  else
+  {
+     alert("Error Password or Username");
+  }
+  }
+
+   </script>
+  -->
+  
+  </body>
+</html>
